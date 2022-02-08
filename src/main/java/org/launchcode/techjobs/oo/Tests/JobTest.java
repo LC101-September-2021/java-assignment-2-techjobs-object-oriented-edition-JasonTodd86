@@ -34,6 +34,34 @@ public class JobTest {
         assertTrue(job.getCoreCompetency() instanceof CoreCompetency);
     }
 
+    @Test
+    public void testJobsForEquality() {
+        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+       assertFalse(job1.equals(job2));
+    }
+
+    //HOW CAN THIS TEST RETURN FALSE AND BE A BOOLEAN IF IT'S ALSO SUPPOSED TO BE VOID??
+
+////        public boolean equals(Object Object obj) {
+//        if (assertEquals(job1, job2);) {
+//                return true;
+//            } else {
+//                return false;
+//            }
+//        }
+//        public boolean equals(Object job2) {
+//
+//            if (job2.getJobId() != getJobId()) {
+//                return false;
+//            }
+//
+//            Job job1 = (Job) job2;
+//            return job1.getJobId() == getJobId();
+//        }
+
+    }
 
 
-}
+
+
