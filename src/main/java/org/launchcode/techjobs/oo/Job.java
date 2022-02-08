@@ -17,6 +17,7 @@ public class Job {
         id = nextId;
         nextId++;
     }
+
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
         this.coreCompetency = coreCompetency;
@@ -46,6 +47,48 @@ public class Job {
     public String getName() {
         return name;
     }
+
+    public String toString() {
+        String sName;
+        if (name == null) {
+            sName = "_______";
+        } else {
+            sName = name;
+        }
+        String sEmployer;
+        if (employer == null) {
+            sEmployer = "_______";
+        } else {
+            sEmployer = employer.toString();
+        }
+        String sLocation;
+        if (location == null) {
+            sLocation = "_______";
+        } else {
+            sLocation = location.toString();
+        }
+        String sPositionType;
+        if (positionType == null) {
+            sPositionType = "_______";
+        } else {
+            sPositionType = positionType.toString();
+        }
+        String sCoreCompetency;
+        if (coreCompetency == null) {
+            sCoreCompetency = "_______";
+        } else {
+            sCoreCompetency = coreCompetency.toString();
+        }
+
+        return "ID: " + id + "\n" +
+                "Name: " + sName + "\n" +
+                "Employer: " + sEmployer + "\n" +
+                "Location: " + sLocation + "\n" +
+                "Position Type: " + sPositionType + "\n" +
+                "Core Competency: " + sCoreCompetency + "\n";
+
+    }
+
 
     public void setName(String name) {
         this.name = name;
@@ -82,11 +125,4 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
-
-
-    // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
-    //  match.
-
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
-    //  and id.
 }
