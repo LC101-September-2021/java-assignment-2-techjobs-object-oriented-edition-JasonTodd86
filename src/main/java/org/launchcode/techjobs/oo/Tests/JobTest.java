@@ -58,12 +58,12 @@ public class JobTest {
 
     @Test
     public void testToStringReturnsUnderscoresWhenValuesGiven() {
-        Job job = new Job("Jason", new Employer("Wayne Enterprises"), new Location("Gotham City"), new PositionType("Intern"), new CoreCompetency("Batarangs"));
+        Job job = new Job("Jason Todd", new Employer("Wayne Enterprises"), new Location("Gotham City"), new PositionType("Intern"), new CoreCompetency("Batarangs"));
         String output = job.toString();
 
         assertEquals(
                 "ID: " + job.getId() + "\n" +
-                        "Name: Jason\n" +
+                        "Name: Jason Todd\n" +
                         "Employer: Wayne Enterprises\n" +
                         "Location: Gotham City\n" +
                         "Position Type: Intern\n" +
