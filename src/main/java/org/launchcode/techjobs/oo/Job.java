@@ -50,34 +50,37 @@ public class Job {
 
     public String toString() {
         String sName;
-        if (name == null) {
-            sName = "_______";
+        if (name == null || name == "" ) {
+            sName = "Data not available";
         } else {
             sName = name;
         }
         String sEmployer;
-        if (employer == null) {
-            sEmployer = "_______";
+        if (employer == null || employer.equals(new Employer(""))) {
+            sEmployer = "Data not available";
         } else {
             sEmployer = employer.toString();
         }
         String sLocation;
-        if (location == null) {
-            sLocation = "_______";
+        if (location == null || location.equals(new Location(""))) {
+            sLocation = "Data not available";
         } else {
             sLocation = location.toString();
         }
         String sPositionType;
-        if (positionType == null) {
-            sPositionType = "_______";
+        if (positionType == null || positionType.equals(new PositionType(""))) {
+            sPositionType = "Data not available";
         } else {
             sPositionType = positionType.toString();
         }
         String sCoreCompetency;
-        if (coreCompetency == null) {
-            sCoreCompetency = "_______";
+        if (coreCompetency == null || coreCompetency.equals(new CoreCompetency(""))) {
+            sCoreCompetency = "Data not available";
         } else {
             sCoreCompetency = coreCompetency.toString();
+        }
+        if(name == null && employer == null && location == null && positionType == null && coreCompetency == null){
+            return "OOPS! This job does not seem to exist.\n";
         }
 
         return "ID: " + id + "\n" +

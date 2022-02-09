@@ -47,12 +47,7 @@ public class JobTest {
         String output = job.toString();
 
         assertEquals(
-                "ID: " + job.getId() + "\n" +
-                "Name: _______\n" +
-                "Employer: _______\n" +
-                "Location: _______\n" +
-                "Position Type: _______\n" +
-                "Core Competency: _______\n", output);
+                "OOPS! This job does not seem to exist.\n", output);
     }
 
 
